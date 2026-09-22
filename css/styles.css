@@ -71,20 +71,20 @@ nav a:hover {
 
 
 .hero {
-  padding: 80px 0 80px;
+  padding: 48px 0 48px;
 }
 
 .hero h1 {
   max-width: 900px;
   margin: 16px 0 24px;
-  font-size: clamp(28px, 7vw, 46px);
+  font-size: clamp(32px, 7vw, 54px);
   line-height: 100%;
   font-weight: 400;
   color: #111;
 }
 
 section {
-  padding: 32px 0;
+  padding: 0 0 32px 0;
   border-top: 1px solid #ddd;
 }
 
@@ -92,6 +92,11 @@ section {
   padding: 48px 0;
   border-bottom: 1px solid #ddd;
 }
+
+#work article:last-child {
+  border-bottom: none;
+}
+
 
 h3 {
   margin: 8px 0 16px 0;
@@ -105,7 +110,7 @@ h3 {
 .hero > * p:first-child,
 h2,
 #work article > p:first-child {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.01em;
   color: #EF1D26;
@@ -126,7 +131,7 @@ p {
 }
 
 .project-label {
-  font-size: 14px;
+  font-size: 16px;
   font-family: "PT Sans", "sans-serif";
   font-weight: 600;
   letter-spacing: 0.01em;
@@ -154,11 +159,87 @@ footer {
   }
 
   .hero {
-    padding: 80px 0 80px;
+    padding: 48px 0 48px;
   }
 
   .project {
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+
+  .project-image {
+    order: -1;
+  }
+}
+
+
+.hero .supporting-text {
+  max-width: 70ch;
+  line-height: 1.5;
+}
+
+#about p {
+  max-width: 70ch;
+  line-height: 1.5;
+}
+
+#about {
+  border-top: 1px solid #111;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "PT Sans", sans-serif;
+  color: #000;
+  text-decoration: none;
+}
+
+.contact-links a span {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-links svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.skills-heading {
+  margin: 32px 0 16px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #EF1D26;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .skills-list {
+    grid-template-columns: 1fr;
   }
 }
