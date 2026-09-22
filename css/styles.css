@@ -1,4 +1,4 @@
-{
+* {
   box-sizing: border-box;
 }
 
@@ -22,7 +22,7 @@ header,
   h2,
   #work article > p:first-child,
   footer {
-    font-family: "PT Sans", "sans-serif";
+    font-family: "PT Sans", sans-serif;
   }
 
 body {
