@@ -56,7 +56,7 @@ a {
 .logo {
   text-decoration: none;
   font-weight: 600;
-  font-size: clamp(18px, 4vw, 24px);
+  font-size: clamp(18px, 4vw, 18px);
 }
 
 /* Navigation links */
@@ -100,7 +100,7 @@ section {
 
 h3 {
   margin: 8px 0 16px 0;
-  font-size: clamp(30px, 4vw, 40px);
+  font-size: clamp(28px, 4vw, 32px);
   font-weight: 400;
   line-height: 100%;
   letter-spacing: -0.02em;
@@ -260,4 +260,76 @@ footer {
   .skills-list {
     grid-template-columns: 1fr;
   }
+}
+
+.phone-demo {
+  position: relative;
+  width: min(100%, 340px);
+  margin-inline: auto;
+  isolation: isolate;
+}
+
+/* The frame image determines the overall phone proportions */
+.phone-demo .phone-demo__frame {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+/* Adjust these values to match your frame's screen opening */
+.phone-demo__screen {
+  position: absolute;
+  z-index: 1;
+  top: 2%;
+  left: 4%;
+  width: 92%;
+  height: 96%;
+  border-radius: 12% / 6%;
+  overflow: hidden;
+  background: #000;
+}
+
+.phone-demo__screen video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Same proportions as your existing project images */
+.project-demo {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #EAE7DE;
+}
+
+/* Space around the phone */
+.project-demo__inner {
+  position: absolute;
+  inset: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Scale the complete phone to the available height */
+.project-demo .phone-demo {
+  width: auto;
+  height: 100%;
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.project-demo .phone-demo__frame {
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: none;
 }
