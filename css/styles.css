@@ -36,6 +36,11 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 32px 0;
+
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.25);
+  z-index: 100;
 }
 
 nav {
@@ -177,7 +182,8 @@ footer {
     gap: 16px;
   }
 
-  .project-image {
+  .project-image,
+  .project-demo {
     order: -1;
   }
 }
@@ -342,4 +348,10 @@ footer {
   width: auto;
   height: 100%;
   max-width: none;
+}
+
+section#work,
+section#about,
+section#contact {
+  scroll-margin-top: 100px;
 }
