@@ -138,6 +138,16 @@ p {
   color: #EF1D26;
 }
 
+.project-meta {
+  margin-top: 8px;
+  margin-bottom: 0px;
+  font-family: "PT Sans", "sans-serif";
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #999;
+}
+
 .project-image {
   max-width: 100%;
   aspect-ratio: 3/2;
