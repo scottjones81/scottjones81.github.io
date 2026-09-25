@@ -46,7 +46,9 @@
       <h2>Principal Product Designer</h2>
 
       <h1>
-        Making complex digital experiences clear, useful and engaging.
+        Shaping product direction.
+        <br class="desktop-break">
+        Bringing clarity and craft to every&nbsp;detail.
       </h1>
 
       <p class="supporting-text">
@@ -65,7 +67,7 @@
         <p class="project-label">The Times: App redesign</p>
         <h3>More of The Times, discovered</h3>
         <p class="supporting-text">A new native app for iOS and Android, designed to help readers discover more of The Times. Each week, 70% of Live app readers visit additional sections such as Life & Style, and 22% explore subsections such as Recipes.</p>
-        <p class="project-meta">Principal product designer • iOS + Android • 2024-5.</p>
+        <p class="project-meta">iOS + Android • 2024-5.</p>
       </div>
         
        <div class="project-demo">
@@ -99,7 +101,7 @@
         <p class="project-label">The Times: Article design</p>
         <h3>Building better article experiences</h3>
         <p class="supporting-text">Redesigned article pages for web, iOS and Android, with new live and comment templates. Clearer layouts and navigation help readers follow developing stories and explore opinion, giving each format its own editorial identity.</p>
-      <p class="project-meta">Principal product designer • iOS + Android + Web • 2025-6.</p>  
+      <p class="project-meta">iOS + Android + Web • 2025-6.</p>  
       </div>
         <img
           class="project-image"
@@ -113,7 +115,7 @@
         <p class="project-label">The Times: Native audio</p>
         <h3>Beyond the written word</h3>
         <p class="supporting-text">Bringing Times Radio and podcasts into the app through a native audio player. Designed to make listening easier to discover, with playback that continues as readers browse and explore more of The Times.</p>
-        <p class="project-meta">Principal product designer • iOS + Android • 2026.</p>  
+        <p class="project-meta">iOS + Android • 2026.</p>  
       </div>
         <img
           class="project-image"
@@ -127,7 +129,7 @@
         <p class="project-label">Factiva: Product redesign</p>
         <h3>Business intelligence, made simpler</h3>
         <p class="supporting-text">Reimagining Factiva for a broader audience, simplifying access to global news and business information with an updated interface designed for desktop and mobile.</p>
-        <p class="project-meta">Senior product designer • Responsive web • 2022.</p>  
+        <p class="project-meta">Responsive web • 2022.</p>  
       </div>
         <img
           class="project-image"
@@ -141,7 +143,7 @@
         <p class="project-label">WSJ Brief: App redesign</p>
         <h3>News and markets at a glance</h3>
         <p class="supporting-text">Evolving a focused mobile app bringing together The Wall Street Journal’s most important news and market data. Personalised watchlists, audio and a crossword helped busy readers stay informed and engaged throughout the day.</p>
-        <p class="project-meta">Senior product designer • iOS • 2020.</p>    
+        <p class="project-meta">iOS • 2020.</p>    
       </div>
         <img
           class="project-image"
@@ -199,15 +201,62 @@
     </svg>
     <span>LinkedIn</span>
   </a>
+
+  <a href="assets/Scott-Jones-CV.pdf" download>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <path d="M12 3v12m-5-5 5 5 5-5" />
+    <path d="M5 16v5h14v-5" />
+  </svg>
+  <span>Download CV (PDF)</span>
+</a>
 </p>
 
     </section>
 
   </main>
 
-  <footer>
-    <p>© 2026 Scott Jones</p>
+  <footer class="site-footer">
+    <div class="cycle-track" aria-hidden="true">
+  <div class="cycle-rider">
+    <img src="images/cyclist.svg" alt="">
+  </div>
+</div>
+    <p id="copyright" class="project-meta">© 2026 Scott Jones</p>
   </footer>
+
+  <script>
+  (() => {
+    const track = document.querySelector(".cycle-track");
+    const copyright = document.querySelector("#copyright");
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    );
+
+    if (!track || !copyright || reducedMotion.matches) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some(entry => entry.isIntersecting)) {
+        track.classList.add("is-riding");
+        observer.disconnect();
+      }
+    }, {
+      threshold: 0.5
+    });
+
+    observer.observe(copyright);
+  })();
+</script>
 
 </body>
 </html>
